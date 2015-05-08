@@ -9,3 +9,7 @@ web:
       - redis
 redis:
   image: redis
+client:
+  build: client/
+  links:
+      - web
