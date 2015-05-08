@@ -1,0 +1,15 @@
+# Aliases file with convenient shortcuts.
+
+export DIR=$(sed 's/[_-]//g' <<< ${PWD##*/})
+export ROOT=${PWD}
+
+function container_ip () {
+    docker inspect --format='{{.NetworkSettings.IPAddress}}' ${DIR}_${1}_1;
+}
+
+
+alias dc="docker-compose"
+
+function shell () {
+    docker exec -it ${DIR}_${1}_1 /bin/bash -l
+}
