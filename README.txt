@@ -1,7 +1,7 @@
-Now we have a bare-basic Flask app.
+Now we have a bare-basic Flask app and a Golang client for that app.
 
 It has a docker-compose.yml file that specifies how to run the Flask image and
-also its dependencies, a Redis container.
+also its dependencies, a Redis container, and the Go client.
 
 Now also with an "aliases" file you can use with "source aliases". Provides
 some handy tools to interface with your containers.
